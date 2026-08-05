@@ -1,0 +1,125 @@
+# Contoh Interaksi Sederhana:
+PS C:\Users\HNLaptop\Documents\mahir-dev> hostname
+SYAMIL
+
+
+# Contoh pwd di Windows:
+PS C:\Users\HNLaptop\Documents\mahir-dev> pwd           
+
+Path                                 
+----                                 
+C:\Users\HNLaptop\Documents\mahir-dev
+
+
+# REM Contoh di CMD Windows:
+PS C:\Users\HNLaptop\Documents\mahir-dev> cd
+PS C:\Users\HNLaptop\Documents\mahir-dev> 
+
+
+# Contoh di PowerShell Windows:
+PS C:\Users\HNLaptop\Documents\mahir-dev> Get-Location
+
+Path                                 
+----                                 
+C:\Users\HNLaptop\Documents\mahir-dev
+
+
+# Contoh ls di Windows:
+PS C:\Users\HNLaptop\Documents\mahir-dev> ls
+
+
+    Directory: C:\Users\HNLaptop\Documents\mahir-dev
+
+
+Mode                 LastWriteTime         Length Name                                                                                     
+----                 -------------         ------ ----                                                                                     
+-a----          8/4/2026   9:26 PM            628 belajar.txt  
+
+
+# Bikin satu folder baru bernama "ProyekCoding"
+PS C:\Users\HNLaptop\Documents\mahir-dev> mkdir ProyekCoding
+
+
+    Directory: C:\Users\HNLaptop\Documents\mahir-dev
+
+
+Mode                 LastWriteTime         Length Name                                                                                     
+----                 -------------         ------ ----                                                                                     
+d-----          8/5/2026   8:39 PM                ProyekCoding   
+
+
+# Cek, folder ProyekCoding seharusnya udah ada
+PS C:\Users\HNLaptop\Documents\mahir-dev> ls
+
+
+    Directory: C:\Users\HNLaptop\Documents\mahir-dev
+
+
+Mode                 LastWriteTime         Length Name                                                                                     
+----                 -------------         ------ ----                                                                                     
+d-----          8/5/2026   8:39 PM                ProyekCoding                                                                             
+-a----          8/5/2026   8:39 PM           1648 belajar.txt                                                                              
+-a----          8/4/2026   9:36 PM             28 README.md   
+
+
+# Masuk ke folder ProyekCoding
+PS C:\Users\HNLaptop\Documents\mahir-dev> cd ProyekCoding
+PS C:\Users\HNLaptop\Documents\mahir-dev\ProyekCoding>
+
+
+# Bikin beberapa folder sekaligus di dalem ProyekCoding
+PS C:\Users\HNLaptop\Documents\mahir-dev\ProyekCoding> mkdir html, css, js, gambar, aset
+
+
+    Directory: C:\Users\HNLaptop\Documents\mahir-dev\ProyekCoding
+
+
+Mode                 LastWriteTime         Length Name                                                                                     
+----                 -------------         ------ ----                                                                                     
+d-----          8/5/2026   8:45 PM                html                                                                                     
+d-----          8/5/2026   8:45 PM                css                                                                                      
+d-----          8/5/2026   8:45 PM                js                                                                                       
+d-----          8/5/2026   8:45 PM                gambar                                                                                   
+d-----          8/5/2026   8:45 PM                aset    
+
+
+# Membuat Struktur Folder Bersarang (Nested):
+# CODE NYA -> mkdir -p DataRahasia/Tahun2026/LaporanBulanan
+# Ini bakal bikin folder DataRahasia, terus di dalemnya Tahun2024,
+# terus di dalemnya lagi LaporanBulanan, meskipun sebelumnya gak ada.
+# HASILNYA -- DI BAWAH INI
+PS C:\Users\HNLaptop\Documents\mahir-dev\ProyekCoding> mkdir -p DataRahasia/Tahun2026/LaporanBulanan
+
+
+    Directory: C:\Users\HNLaptop\Documents\mahir-dev\ProyekCoding\DataRahasia\Tahun2026
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          8/5/2026   8:47 PM                LaporanBulanan                                                                           
+
+
+#  Cara Bikin File Kosong di Windows (CMD/PowerShell) dgn New-Item
+PS C:\Users\HNLaptop\Documents\mahir-dev\ProyekCoding> New-Item  index.html, style.css, skrip.js
+
+
+    Directory: C:\Users\HNLaptop\Documents\mahir-dev\ProyekCoding
+
+
+Mode                 LastWriteTime         Length Name                                                                                     
+----                 -------------         ------ ----                                                                                     
+-a----          8/5/2026   8:59 PM              0 index.html                                                                               
+-a----          8/5/2026   8:59 PM              0 style.css                                                                                
+-a----          8/5/2026   8:59 PM              0 skrip.js   
+
+
+# Nyalin laporan.txt jadi laporan_salinan.txt di folder yang sama
+Tidak bisa (error)
+
+
+# Mindahin laporan.txt ke folder "Selesai"
+mv laporan.txt Selesai/
+
+
+# Ganti nama file "Selesai/draft.txt" jadi "Selesai/final.txt"
+mv Selesai/laporan.txt Selesai/final.txt
